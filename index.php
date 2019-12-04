@@ -13,7 +13,7 @@
 
 
 <form action="addContact.php">
-    <button id="btn_add_contact"><a href="addContact.php" id="btn_link" target="_blank">Add Contact</a></button>
+    <button id="btn_add_contact"><a href="addContact.php" id="btn_link" target="_blank">新增連絡人</a></button>
 
 </form>
 
@@ -57,15 +57,15 @@ try {
     <table   border="1" style="border-collapse: collapse">
 
         <tr>
-            <th>Row</th>
-            <th>contact Image</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Contact Address</th>
-            <th>Delete</th>
-            <th>Edit</th>
+            <th>人數</th>
+            <th>頭像</th>
+            <th>姓氏</th>
+            <th>名字</th>
+            <th>電子郵件</th>
+            <th>手機</th>
+            <th>連絡地址</th>
+            <th>刪除</th>
+            <th>編輯</th>
 
         </tr>
 

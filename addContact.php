@@ -113,32 +113,32 @@
 
             <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
             <div class="w3-rest">
-                <input class="w3-input w3-border" name="first" type="text" placeholder="First Name">
+                <input class="w3-input w3-border" name="first" type="text" placeholder="輸入姓氏">
             </div>
         </div>
         <div class="w3-row w3-section">
             <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
             <div class="w3-rest">
-                <input class="w3-input w3-border" name="last" type="text" placeholder="Last Name">
+                <input class="w3-input w3-border" name="last" type="text" placeholder="輸入名字">
             </div>
         </div>
         <div class="w3-row w3-section">
             <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
             <div class="w3-rest">
-                <input class="w3-input w3-border" name="email" type="text" placeholder="Email">
+                <input class="w3-input w3-border" name="email" type="text" placeholder="輸入 Email">
             </div>
         </div>
         <div class="w3-row w3-section">
             <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-phone"></i></div>
             <div class="w3-rest">
-                <input class="w3-input w3-border" name="phone" type="text" placeholder="Phone">
+                <input class="w3-input w3-border" name="phone" type="text" placeholder="輸入手機">
             </div>
         </div>
         <div class="w3-row w3-section">
             <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-map-marker"></i></div>
             <div class="w3-rest">
 
-                <textarea name="address" class="w3-input w3-border"></textarea>
+                <textarea name="address" class="w3-input w3-border" placeholder="輸入地址"></textarea>
 
             </div>
         </div>
@@ -147,13 +147,13 @@
         <div class="w3-row w3-section">
             <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-image"></i></div>
             <div class="w3-rest">
-                Select Image to upload
+                選擇上傳的頭像
                 <input type="file" name="fileToUpload">
 
             </div>
 
-            <button class="w3-button w3-block w3-section w3-blue w3-ripple w3-padding" name="submit">Add Contact</button>
-            <a href="index.php">Back to Home</a>
+            <button class="w3-button w3-block w3-section w3-blue w3-ripple w3-padding" name="submit">新增通訊錄</button>
+            <a href="index.php">回到首頁</a>
         </div>
     </form>
 
