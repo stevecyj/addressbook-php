@@ -1,1 +1,1 @@
-# php，html 簡易通訊錄
+# php、html 簡易通訊錄
