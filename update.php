@@ -12,7 +12,7 @@ try
     $phoneUpdate = $_POST['phone'];
     $addressUpdate = $_POST['address'];
 
-    $sql = "UPDATE contacts SET Fname = '$fnameUpdate',Lname='$lnameUpdate',Email='$emailUpdate',Phone = '$phoneUpdate',Address = '$addressUpdate' WHERE ID='$idupdate'";
+    $sql = "UPDATE contacts SET Fname = '$fnameUpdate',Lname='$lnameUpdate',Email='$emailUpdate',Phone = '$phoneUpdate',Address = '$addressUpdate' WHERE id='$idupdate'";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
 

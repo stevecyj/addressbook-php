@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<h1 align="center">Address Book</h1>
+<h1 align="center">通訊錄</h1>
 
 
 
@@ -60,12 +60,12 @@ try {
             <th>人數</th>
             <th>頭像</th>
             <th>姓氏</th>
-            <th>名字</th>
+            <th align="center" valign="center">名字</th>
             <th>電子郵件</th>
             <th>手機</th>
             <th>連絡地址</th>
-            <th>刪除</th>
-            <th>編輯</th>
+            <th colspan = 2>操作</th>
+            
 
         </tr>
 
@@ -90,8 +90,8 @@ try {
                 <td>
                     <form action="delete.php" method="post">
 
-                        <input type="hidden" name="Id" value="<?php echo $result['ID']?>">
-                        <input type="submit" style="padding: 10px 24px;background-color: purple;color: white" value="Delete">
+                        <input type="hidden" name="id" value="<?php echo $result['id']?>">
+                        <input type="submit" style="padding: 10px 24px;background-color: purple;color: white" value="刪除">
                     </form>
 
                 </td>
@@ -99,8 +99,8 @@ try {
                 <td>
 
                     <form action="editfrm.php" method="post">
-                        <input type="hidden"  name="contactId" value="<?php echo $result['ID']?>">
-                        <input type="submit" style="padding: 10px 24px;background-color: purple;color: white" value="Edit">
+                        <input type="hidden"  name="contactid" value="<?php echo $result['id']?>">
+                        <input type="submit" style="padding: 10px 24px;background-color: purple;color: white" value="修改">
                     </form>
 
                 </td>

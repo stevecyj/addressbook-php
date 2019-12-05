@@ -16,7 +16,7 @@ include "function/Myfunc.php";
 
      //first name validation
      if (empty($firstname)) {
-         echo $fnameErr = "First name is require";
+         echo $fnameErr = "請輸入姓氏!";
          echo "<br>";
      } else {
          $fname = check_input($firstname);
@@ -33,7 +33,7 @@ include "function/Myfunc.php";
 
 
      if (empty($lastname)) {
-         echo $lnameErr = "Last name is require";
+         echo $lnameErr = "請輸入名字";
          echo "<br>";
      } else {
          $lname = check_input($lastname);
@@ -49,24 +49,24 @@ include "function/Myfunc.php";
      //Email Validation
 
      if (empty($email)) {
-         echo $emailErr = "Email is require";
+         echo $emailErr = "請輸入Email";
          echo "<br>";
      } else {
          $em = check_input($email);
 
          if (!filter_var($em, FILTER_VALIDATE_EMAIL)) {
-             echo $emailErr = "Invalid Email address";
+             echo $emailErr = "Email信箱格是不正確";
          }
      }
 
      //Phone number validation
 
      if (empty($phone)) {
-         echo $phoneErr = "Phone Number is require";
+         echo $phoneErr = "請輸入10位數字手機號碼";
          echo "<br>";
      } else {
          if (!preg_match('/^\d{10}$/', $phone)) {
-             echo $phoneErr = "Invalid Phone Number";
+             echo $phoneErr = "手機號碼格是不正確";
          }
      }
 
@@ -77,7 +77,7 @@ include "function/Myfunc.php";
          header("location:addContact.php?fnameErr=$fnameErr&lnameErr=$lnameErr&emailErr=$emailErr&phoneErr=$phoneErr&photoErr=$PhotoErr");
      } else {
          if (isset($_POST["submit"]) && isset($_FILES["fileToUpload"])) {
-             $target_dir = "upload/";
+             $target_dir = "images/";
 
              $target_file = $target_dir.basename($_FILES["fileToUpload"]["name"]);
 
@@ -86,7 +86,7 @@ include "function/Myfunc.php";
              $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
              if (empty($_FILES["fileToUpload"]["name"])) {
-                 $ImgDefault = "image/default.png";
+                 $ImgDefault = "images/default.png";
 
 
                  // $imgName = "$target_file".basename($_FILES["fileToUpload"]["name"]);
@@ -103,7 +103,7 @@ include "function/Myfunc.php";
 
                  $stmt->execute();
 
-                 echo $success =  "Successfully";
+                 echo $success =  "成功新增一筆資料";
 
                  header("location:addContact.php?success=$success");
              } else {
@@ -120,7 +120,7 @@ include "function/Myfunc.php";
                      echo $imgErr = "file is an image - ".$check['mime'].".";
                      $uploadOk = 1;
                  } else {
-                     echo $imgErr = "file is not an image";
+                     echo $imgErr = "上傳的檔案不是圖片格式";
 
                      $uploadOk = 0;
 
@@ -138,7 +138,7 @@ include "function/Myfunc.php";
                  // check size of my file
 
                  if ($_FILES["fileToUpload"]["size"]>50000) {
-                     echo $imgErr = "Sorry,your file is too large";
+                     echo $imgErr = "抱歉，上傳得檔案容量太大";
                      $uploadOk = 0;
                      header("location:addContact.php?imgErr=$imgErr");
                  }
@@ -146,7 +146,7 @@ include "function/Myfunc.php";
                  //user can only image file not other file
 
                  if ($imageFileType !="jpg" && $imageFileType!="png" && $imageFileType!="jpeg" && $imageFileType!="gif") {
-                     echo $imgErr = "Sorry,Only JPG,JPEG,PNG &GIF file are allowed";
+                     echo $imgErr = "抱歉,圖片格式僅支援 JPG,JPEG,PNG &GIF file 格式";
                      echo "<br>";
                      $uploadOk = 0;
                      header("location:addContact.php?imgErr=$imgErr");
@@ -155,7 +155,7 @@ include "function/Myfunc.php";
                  //set error if $uploadOk = 0
 
                  if ($uploadOk ==0) {
-                     echo $FailedUpload= "Sorry,your file was not uploaded";
+                     echo $FailedUpload= "抱歉，選擇的檔案並未上傳，請重新操作";
                      header("location:addContact.php?imgErr=$imgErr&failed=$FailedUpload");
                  }
 
@@ -178,7 +178,7 @@ include "function/Myfunc.php";
 
                          $stmt->execute();
 
-                         echo $success = "Successfully";
+                         echo $success = "成功新增一筆資料";
 
                          header("location:addContact.php?success=$success");
                      }
