@@ -77,7 +77,7 @@ include "function/Myfunc.php";
          header("location:addContact.php?fnameErr=$fnameErr&lnameErr=$lnameErr&emailErr=$emailErr&phoneErr=$phoneErr&photoErr=$PhotoErr");
      } else {
          if (isset($_POST["submit"]) && isset($_FILES["fileToUpload"])) {
-             $target_dir = "images/";
+             $target_dir = "../images/";
 
              $target_file = $target_dir.basename($_FILES["fileToUpload"]["name"]);
 
@@ -86,7 +86,7 @@ include "function/Myfunc.php";
              $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
              if (empty($_FILES["fileToUpload"]["name"])) {
-                 $ImgDefault = "images/default.png";
+                 $ImgDefault = "../images/default.png";
 
 
                  // $imgName = "$target_file".basename($_FILES["fileToUpload"]["name"]);
